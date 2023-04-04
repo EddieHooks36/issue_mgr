@@ -40,7 +40,7 @@ class IssueUpdateView(
             issue.author == self.request.user
             or self.request.user.role == product_owner)
 
-class DeleteView(
+class IssueDeleteView(
     LoginRequiredMixin,
     UserPassesTestMixin,
     DeleteView):
